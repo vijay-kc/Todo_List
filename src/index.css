@@ -2,9 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 #root{
-  background-image: url("./img/bgtodo.jpg");
+  background-image: url("./img/todobg.jpg");
   background-repeat: no-repeat ;
   background-size: cover;
-  
   
 }

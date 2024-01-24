@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import { TodoProvider } from './contexts'
-import TodoForm from './Components/TodoForm'
-import Todoitem from './Components/Todoitem'
+import TodoForm from './Compnents/TodoForm'
+import TodoItem from './Compnents/TodoItem'
 import './App.css'
+import { TodoProvider } from './Contexts/TodoContext'
 
 
 function App() {
@@ -40,10 +40,9 @@ function App() {
   return (
     <>
       <TodoProvider value={{todos,addTodo,updateTodo,deleteTodo,toggleComplete}}>
-       <div className=" min-h-screen py-8  bg-local ">
-          <div className=" bg-sky-100
-          opacity-80 shadow-2xl w-full max-w-2xl mx-auto rounded-lg px-4 py-3 text-sky-600">
-              <h1 className=" font-sans italic  text-4xl font-bold text-center mb-8 mt-1">Manage Your Todos</h1>
+       <div className=" min-h-screen py-12 bg-local opacity-90">
+          <div className=" shadow-2xl w-full max-w-2xl mx-auto rounded-lg px-4 py-3 text-sky-600">
+              <h1 className=" font-sans italic  text-4xl font-bold text-center mb-8 mt-3">Manage Your Todos</h1>
               <div className="mb-4">
                   {/* Todo form goes here */} 
                   <TodoForm/>
@@ -54,7 +53,7 @@ function App() {
                     <div key={todo.id}
                       className='w-full'
                     >
-                      <Todoitem todo={todo} />
+                      <TodoItem todo={todo} />
                     </div>
                   ))}
               </div>
