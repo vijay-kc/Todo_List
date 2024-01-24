@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import TodoForm from './Compnents/TodoForm'
-import TodoItem from './Compnents/TodoItem'
+import TodoForm from './compnents/TodoForm'
+import TodoItem from './compnents/TodoItem'
 import './App.css'
-import { TodoProvider } from './Contexts/TodoContext'
+import {TodoProvider} from './contexts/Todocontext'
 
 
 function App() {
